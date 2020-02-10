@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class TodoListAdapter : RecyclerView.Adapter<TodoListViewHolder>() {
 
-    private val todoList = arrayOf<String> ("Android Development","House Work", "Errands")
+    private val todoList = arrayOf<String> ("Android Development","House Work", "Errands", "Shopping")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoListViewHolder {
         val view = LayoutInflater.from(parent.context)
