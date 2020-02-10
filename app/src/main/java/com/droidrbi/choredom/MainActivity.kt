@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         todoListerRecyclerView = findViewById(R.id.lists_recyclerview)
         todoListerRecyclerView.layoutManager = LinearLayoutManager(this)
+        todoListerRecyclerView.adapter = TodoListAdapter()
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
