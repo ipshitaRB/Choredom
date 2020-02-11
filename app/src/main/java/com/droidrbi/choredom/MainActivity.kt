@@ -48,8 +48,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showCreateTodoListDialog() {
-        val dialogTitle = "What is the name of your list"
-        val positiveButtonTitle = "Create"
+        val dialogTitle = getString(R.string.name_of_list)
+        val positiveButtonTitle = getString(R.string.create_list)
         val myDialog = AlertDialog.Builder(this)
         val todoTitleEditText = EditText(this)
         // Each word will be capitalized for flag_cap_words
