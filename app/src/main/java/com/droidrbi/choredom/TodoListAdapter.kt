@@ -8,7 +8,7 @@ class TodoListAdapter : RecyclerView.Adapter<TodoListViewHolder>() {
 
     private var todoList = mutableListOf ("Android Development","House Work", "Errands", "Shopping")
 
-    fun addNewItem(item:String){
+    fun addNewItem(item:String = ""){
         todoList.add(item)
         //notify adapter that list has changed
         notifyDataSetChanged()
