@@ -26,5 +26,6 @@ class TodoListAdapter : RecyclerView.Adapter<TodoListViewHolder>() {
     override fun onBindViewHolder(holder: TodoListViewHolder, position: Int) {
         holder.listPosititonTextView.text = (position + 1).toString()
         holder.listTitleTextView.text = todoList[position]
+
     }
 }

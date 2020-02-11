@@ -25,8 +25,6 @@ class MainActivity : AppCompatActivity() {
         todoListerRecyclerView.adapter = TodoListAdapter()
 
         fab.setOnClickListener { _ ->
-            // cast adapter to your todoListAdapter
-            //val adapter = todoListerRecyclerView.adapter as TodoListAdapter
             showCreateTodoListDialog()
         }
     }
@@ -48,6 +46,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showCreateTodoListDialog() {
+
+        // cast adapter to your todoListAdapter
+        val adapter = todoListerRecyclerView.adapter as TodoListAdapter
         val dialogTitle = getString(R.string.name_of_list)
         val positiveButtonTitle = getString(R.string.create_list)
         val myDialog = AlertDialog.Builder(this)
@@ -60,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
         myDialog.setPositiveButton(positiveButtonTitle){
             dialog, _ ->
-                todoTitleEditText.text
+                adapter.addNewItem(todoTitleEditText.text.toString())
                 dialog.dismiss()
 
         }
