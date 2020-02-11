@@ -1,4 +1,4 @@
 package com.droidrbi.choredom
 
-class TaskList {
+class TaskList(val name:String, val tasks:ArrayList<String> = ArrayList()) {
 }
