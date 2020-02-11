@@ -24,8 +24,9 @@ class MainActivity : AppCompatActivity() {
         todoListerRecyclerView.adapter = TodoListAdapter()
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            // cast adapter to your todoListAdapter
+            val adapter = todoListerRecyclerView.adapter as TodoListAdapter
+            adapter.addNewItem()
         }
     }
 
