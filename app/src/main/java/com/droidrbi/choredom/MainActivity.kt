@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         myDialog.setPositiveButton(positiveButtonTitle){
             dialog, _ ->
+                todoTitleEditText.text
                 dialog.dismiss()
 
         }
