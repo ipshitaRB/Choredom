@@ -8,6 +8,11 @@ class TodoListAdapter : RecyclerView.Adapter<TodoListViewHolder>() {
 
     private var todoList = mutableListOf ("Android Development","House Work", "Errands", "Shopping")
 
+    fun addNewItem(){
+        todoList.add("Todo List" + (todoList.size + 1))
+        //notify adapter that list has changed
+        notifyDataSetChanged()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoListViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.todo_list_view_holder, parent,false)
