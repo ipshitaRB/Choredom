@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         fab.setOnClickListener { _ ->
             // cast adapter to your todoListAdapter
-            val adapter = todoListerRecyclerView.adapter as TodoListAdapter
-            adapter.addNewItem()
+            //val adapter = todoListerRecyclerView.adapter as TodoListAdapter
+            showCreateTodoListDialog()
         }
     }
 
