@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         listDataManager = ListDataManager(this)
-        val lists = listDataManager
+        val lists = listDataManager.readLists()
         todoListerRecyclerView = findViewById(R.id.lists_recyclerview)
         todoListerRecyclerView.layoutManager = LinearLayoutManager(this)
-        todoListerRecyclerView.adapter = TodoListAdapter()
+        todoListerRecyclerView.adapter = TodoListAdapter(lists)
 
         fab.setOnClickListener { _ ->
             showCreateTodoListDialog()
