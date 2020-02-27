@@ -28,4 +28,8 @@ class TodoListAdapter : RecyclerView.Adapter<TodoListViewHolder>() {
         holder.listTitleTextView.text = todoList[position]
 
     }
+
+    fun addList(list: TaskList) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }
